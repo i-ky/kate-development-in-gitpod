@@ -1,0 +1,11 @@
+image: gitpod/workspace-full
+tasks:
+- init: >-
+    mkdir -p /workspace/kde/src &&
+    cd /workspace/kde/src &&
+    git clone https://invent.kde.org/sdk/kdesrc-build.git &&
+    cd - &&
+    ln --symbolic /workspace/kde/src/kdesrc-build/kdesrc-build ~/.local/bin &&
+    ln --symbolic kdesrc-buildrc ~/.config/ &&
+    kdesrc-build --initial-setup
+  command: kdesrc-build --include-dependencies kate

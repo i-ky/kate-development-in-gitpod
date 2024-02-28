@@ -1,0 +1,27 @@
+global
+    # use the latest KF6 and Qt6-based software.
+    branch-group kf6-qt6
+
+    # we want .kateproject files with ninja, turn off some Qt 5 things to have less dependencies
+    cmake-options -G "Kate - Ninja" -DBUILD_WITH_QT6=ON -DQT_MAJOR_VERSION=6 -DPHONON_BUILD_QT5=OFF -DBUILD_QT5=OFF
+
+    # clangd tooling
+    compile-commands-export yes
+    compile-commands-linking yes
+
+    # flat structure
+    directory-layout flat
+
+    # Install directory for KDE software
+    kdedir /workspace/kde/usr
+
+    # Directory for downloaded source code
+    source-dir /workspace/kde/src
+
+    # Directory to build KDE into before installing
+    # relative to source-dir by default
+    build-dir /workspace/kde/build
+end global
+
+include /workspace/kde/src/kdesrc-build/data/build-include/kf6-frameworks.ksb
+include /workspace/kde/src/kdesrc-build/data/build-include/kf6-applications.ksb
