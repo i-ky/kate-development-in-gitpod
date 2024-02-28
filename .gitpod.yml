@@ -6,6 +6,6 @@ tasks:
     git clone https://invent.kde.org/sdk/kdesrc-build.git &&
     cd - &&
     ln --symbolic /workspace/kde/src/kdesrc-build/kdesrc-build ~/.local/bin &&
-    ln --symbolic kdesrc-buildrc ~/.config/ &&
+    ln --symbolic $PWD/kdesrc-buildrc ~/.config/ &&
     kdesrc-build --initial-setup
   command: kdesrc-build --include-dependencies kate
