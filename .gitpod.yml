@@ -7,5 +7,6 @@ tasks:
     cd - &&
     ln --symbolic /workspace/kde/src/kdesrc-build/kdesrc-build ~/.local/bin &&
     ln --symbolic $PWD/kdesrc-buildrc ~/.config/ &&
+    sudo apt-get update &&
     kdesrc-build --initial-setup
   command: kdesrc-build --include-dependencies kate
