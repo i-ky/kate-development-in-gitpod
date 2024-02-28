@@ -13,7 +13,7 @@ global
     directory-layout flat
 
     # Install directory for KDE software
-    kdedir /workspace/kde/usr
+    install-dir /workspace/kde/usr
 
     # Directory for downloaded source code
     source-dir /workspace/kde/src
