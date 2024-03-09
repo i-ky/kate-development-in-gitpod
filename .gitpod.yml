@@ -9,4 +9,6 @@ tasks:
     ln --symbolic $PWD/kdesrc-buildrc ~/.config/ &&
     sudo apt-get update &&
     kdesrc-build --initial-setup
-  command: kdesrc-build --include-dependencies kate
+  command: >-
+    ln --force --symbolic /workspace/kde/src/kdesrc-build/kdesrc-build ~/.local/bin &&
+    kdesrc-build --include-dependencies kate
