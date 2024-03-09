@@ -23,5 +23,4 @@ global
     build-dir /workspace/kde/build
 end global
 
-include /workspace/kde/src/kdesrc-build/data/build-include/kf6-frameworks.ksb
-include /workspace/kde/src/kdesrc-build/data/build-include/kf6-applications.ksb
+include ${module-definitions-dir}/kf6-qt6.ksb
