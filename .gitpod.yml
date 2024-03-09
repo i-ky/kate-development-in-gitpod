@@ -7,7 +7,10 @@ tasks:
     cd - &&
     ln --symbolic /workspace/kde/src/kdesrc-build/kdesrc-build ~/.local/bin &&
     ln --symbolic $PWD/kdesrc-buildrc ~/.config/ &&
+    sudo sed -i.bak 's/^# *deb-src/deb-src/g' /etc/apt/sources.list &&
     sudo apt-get update &&
+    sudo apt-get build-dep -y extra-cmake-modules kconfig &&
+    sudo apt-get install -y qt6-l10n-tools qt6-tools-dev-tools qt6-base-dev &&
     kdesrc-build --initial-setup
   command: >-
     ln --force --symbolic /workspace/kde/src/kdesrc-build/kdesrc-build ~/.local/bin &&
