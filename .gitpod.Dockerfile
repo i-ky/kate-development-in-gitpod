@@ -5,3 +5,5 @@ RUN apt-get -q update && \
         git \
     && \
     rm -rf /var/lib/apt/lists/*
+
+ENV PATH=/workspace/kde/src/kdesrc-build:${PATH}
