@@ -4,6 +4,8 @@ RUN apt-get -q update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -yq \
         git \
+        gpg-agent \
+        gpgsm \
         sudo \
         tzdata \
     && \
