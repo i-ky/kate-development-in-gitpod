@@ -1,4 +1,5 @@
-image: ubuntu:oracular-20240617
+image:
+  file: .gitpod.Dockerfile
 tasks:
 - init: >-
     mkdir -p /workspace/kde/src &&
