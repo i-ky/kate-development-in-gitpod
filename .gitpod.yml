@@ -6,6 +6,7 @@ tasks:
     cd /workspace/kde/src &&
     git clone https://invent.kde.org/sdk/kdesrc-build.git &&
     cd - &&
+    mkdir ~/.config/ &&
     ln --symbolic $PWD/kdesrc-buildrc ~/.config/ &&
     sudo sed -i.bak 's/^# *deb-src/deb-src/g' /etc/apt/sources.list &&
     sudo apt-get update &&
