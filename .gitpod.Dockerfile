@@ -1,9 +1,11 @@
 FROM ubuntu:oracular-20240617
 
 RUN apt-get -q update && \
+    DEBIAN_FRONTEND=noninteractive \
     apt-get install -yq \
         git \
         sudo \
+        tzdata \
     && \
     rm -rf /var/lib/apt/lists/*
 
