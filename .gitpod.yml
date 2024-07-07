@@ -6,7 +6,6 @@ tasks:
     cd /workspace/kde/src &&
     git clone https://invent.kde.org/sdk/kdesrc-build.git &&
     cd - &&
-    ln --symbolic /workspace/kde/src/kdesrc-build/kdesrc-build ~/.local/bin &&
     ln --symbolic $PWD/kdesrc-buildrc ~/.config/ &&
     sudo sed -i.bak 's/^# *deb-src/deb-src/g' /etc/apt/sources.list &&
     sudo apt-get update &&
@@ -14,5 +13,4 @@ tasks:
     sudo apt-get install -y qt6-l10n-tools qt6-tools-dev-tools qt6-base-dev &&
     kdesrc-build --initial-setup
   command: >-
-    ln --force --symbolic /workspace/kde/src/kdesrc-build/kdesrc-build ~/.local/bin &&
     kdesrc-build --include-dependencies kate
