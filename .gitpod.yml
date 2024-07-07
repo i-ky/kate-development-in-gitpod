@@ -1,4 +1,4 @@
-image: gitpod/workspace-full:2024-07-02-14-18-47
+image: ubuntu:oracular-20240617
 tasks:
 - init: >-
     mkdir -p /workspace/kde/src &&
